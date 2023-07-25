@@ -70,8 +70,8 @@ export default function Login() {
   return (
     <Page title="Login">
       <RootStyle>
-        <HeaderStyle>
-          <Logo />
+        {/* <HeaderStyle>
+         
           {smUp && (
             <Typography variant="body2" sx={{ mt: { md: -2 } }}>
               Don’t have an account? {''}
@@ -80,18 +80,16 @@ export default function Login() {
               </Link>
             </Typography>
           )}
-        </HeaderStyle>
+        </HeaderStyle> */}
 
         {mdUp && (
           <SectionStyle>
-            <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-              Hi, Welcome Back
-            </Typography>
+            
             <Image
               visibleByDefault
               disabledEffect
               alt="login"
-              src="https://minimal-assets-api.vercel.app/assets/illustrations/illustration_login.png"
+              src="https://i0.wp.com/dasash.com/wp-content/uploads/2023/01/pop_style_text_effect-2.png?resize=1024%2C763&ssl=1"
             />
           </SectionStyle>
         )}
@@ -101,11 +99,11 @@ export default function Login() {
             <Stack direction="row" alignItems="center" sx={{ mb: 5 }}>
               <Box sx={{ flexGrow: 1 }}>
                 <Typography variant="h4" gutterBottom>
-                  Sign in to Minimal
+                  Sign in to Dasash
                 </Typography>
                 <Typography sx={{ color: 'text.secondary' }}>Enter your details below.</Typography>
               </Box>
-
+{/* 
               <Tooltip title={capitalCase(method)} placement="right">
                 <>
                   <Image
@@ -114,12 +112,10 @@ export default function Login() {
                     sx={{ width: 32, height: 32 }}
                   />
                 </>
-              </Tooltip>
+              </Tooltip> */}
             </Stack>
 
-            <Alert severity="info" sx={{ mb: 3 }}>
-              Use email : <strong>demo@minimals.cc</strong> / password :<strong> demo1234</strong>
-            </Alert>
+           
 
             <LoginForm />
 
