@@ -55,7 +55,7 @@ export default function LoginForm() {
       const {email, password} = data;
       if(email === defaultValues.email && password === defaultValues.password){
         console.log("login",data);
-        login(email, password)
+        await login(email, password)
 
       } else {
         throw Error("")
