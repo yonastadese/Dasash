@@ -50,7 +50,16 @@ export default function LoginForm() {
 
   const onSubmit = async (data) => {
     try {
-      await login(data.email, data.password);
+      console.log("login",data);
+      // await login(data.email, data.password);
+      const {email, password} = data;
+      if(email === defaultValues.email && password === defaultValues.password){
+        console.log("login",data);
+        login(email, password)
+
+      } else {
+        throw Error("")
+      }
     } catch (error) {
       console.error(error);
       reset();
