@@ -25,7 +25,7 @@ export default function GeneralBanking() {
     <Page title="General: Banking">
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={7}>
+          {/* <Grid item xs={12} md={7}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3}>
               <BankingWidgetSummary
                 title="Income"
@@ -43,27 +43,27 @@ export default function GeneralBanking() {
                 chartData={[111, 136, 76, 108, 74, 54, 57, 84]}
               />
             </Stack>
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={5}>
+          {/* <Grid item xs={12} md={5}>
             <BankingCurrentBalance />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={12}>
             <Stack spacing={3}>
               <BankingBalanceStatistics />
               <BankingExpensesCategories />
-              <BankingRecentTransitions />
+              {/* <BankingRecentTransitions /> */}
             </Stack>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <Stack spacing={3}>
               <BankingQuickTransfer />
               <BankingContacts />
               <BankingInviteFriends />
             </Stack>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Page>

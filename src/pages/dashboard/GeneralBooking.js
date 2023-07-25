@@ -28,7 +28,7 @@ export default function GeneralBooking() {
     <Page title="General: Banking">
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <BookingWidgetSummary title="Total Booking" total={714000} icon={<BookingIllustration />} />
           </Grid>
 
@@ -38,7 +38,7 @@ export default function GeneralBooking() {
 
           <Grid item xs={12} md={4}>
             <BookingWidgetSummary title="Check Out" total={124000} icon={<CheckOutIllustration />} />
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12} md={8}>
             <Grid container spacing={3}>
@@ -60,21 +60,21 @@ export default function GeneralBooking() {
             <BookingRoomAvailable />
           </Grid>
 
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={12}>
             <BookingReservationStats />
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <BookingCustomerReviews />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <BookingNewestBooking />
           </Grid>
 
           <Grid item xs={12}>
             <BookingDetails />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Page>

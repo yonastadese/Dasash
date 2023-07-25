@@ -31,13 +31,13 @@ export default function GeneralApp() {
     <Page title="General: App">
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={8}>
+          {/* <Grid item xs={12} md={8}>
             <AppWelcome displayName={user?.displayName} />
           </Grid>
 
           <Grid item xs={12} md={4}>
             <AppFeatured />
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12} md={4}>
             <AppWidgetSummary
@@ -77,28 +77,28 @@ export default function GeneralApp() {
             <AppAreaInstalled />
           </Grid>
 
-          <Grid item xs={12} lg={8}>
+          <Grid item xs={12} lg={12}>
             <AppNewInvoice />
           </Grid>
-
+{/* 
           <Grid item xs={12} md={6} lg={4}>
             <AppTopRelated />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={6} lg={4}>
+          {/* <Grid item xs={12} md={6} lg={4}>
             <AppTopInstalledCountries />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
             <AppTopAuthors />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={6} lg={4}>
+          {/* <Grid item xs={12} md={6} lg={4}>
             <Stack spacing={3}>
               <AppWidget title="Conversion" total={38566} icon={'eva:person-fill'} chartData={48} />
               <AppWidget title="Applications" total={55566} icon={'eva:email-fill'} color="warning" chartData={75} />
             </Stack>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Page>

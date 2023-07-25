@@ -25,12 +25,12 @@ export default function GeneralAnalytics() {
   return (
     <Page title="General: Analytics">
       <Container maxWidth={themeStretch ? false : 'xl'}>
-        <Typography variant="h4" sx={{ mb: 5 }}>
+        {/* <Typography variant="h4" sx={{ mb: 5 }}>
           Hi, Welcome back
-        </Typography>
+        </Typography> */}
 
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={3}>
+          {/* <Grid item xs={12} sm={6} md={3}>
             <AnalyticsWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
           </Grid>
 
@@ -49,7 +49,7 @@ export default function GeneralAnalytics() {
 
           <Grid item xs={12} sm={6} md={3}>
             <AnalyticsWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12} md={6} lg={8}>
             <AnalyticsWebsiteVisits />
@@ -67,7 +67,7 @@ export default function GeneralAnalytics() {
             <AnalyticsCurrentSubject />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={8}>
+          {/* <Grid item xs={12} md={6} lg={8}>
             <AnalyticsNewsUpdate />
           </Grid>
 
@@ -81,7 +81,7 @@ export default function GeneralAnalytics() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AnalyticsTasks />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Page>
