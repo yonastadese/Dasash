@@ -30,11 +30,11 @@ const navConfig = [
   {
     subheader: 'general',
     items: [
-      { title: 'Dashboard', path: PATH_DASHBOARD.general.app, icon: ICONS.dashboard },//app
-      { title: 'Birhan Bank', path: PATH_DASHBOARD.general.ecommerce, icon: ICONS.ecommerce },//ecommerce
-      { title: 'Bole', path: PATH_DASHBOARD.general.analytics, icon: ICONS.analytics },//analytics
-      { title: 'Jemo', path: PATH_DASHBOARD.general.banking, icon: ICONS.banking },//banking
-      { title: 'Mexico', path: PATH_DASHBOARD.general.booking, icon: ICONS.booking },//booking
+      { title: 'Dashboard', path: PATH_DASHBOARD.general.app, icon: ICONS.dashboard },
+      { title: 'Birhan Bank', path: PATH_DASHBOARD.general.ecommerce, icon: ICONS.ecommerce },
+      { title: 'Bole', path: PATH_DASHBOARD.general.analytics, icon: ICONS.analytics },
+      { title: 'Jemo', path: PATH_DASHBOARD.general.banking, icon: ICONS.banking },
+      { title: 'Mexico', path: PATH_DASHBOARD.general.booking, icon: ICONS.booking },
     ],
   },
 
