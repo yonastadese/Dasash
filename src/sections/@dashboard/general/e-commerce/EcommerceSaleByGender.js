@@ -31,13 +31,13 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [44, 75];
+const CHART_DATA = [44, 75, 82];
 
 export default function EcommerceSaleByGender() {
   const theme = useTheme();
 
   const chartOptions = merge(BaseOptionChart(), {
-    labels: ['Mens', 'Womens'],
+    labels: ['Mens', 'Womens', 'Trans'],
     legend: { floating: true, horizontalAlign: 'center' },
     fill: {
       type: 'gradient',
@@ -63,6 +63,16 @@ export default function EcommerceSaleByGender() {
               color: theme.palette.warning.main,
             },
           ],
+          [
+            {
+              offset: 0,
+              color: theme.palette.secondary.light,
+            },
+            {
+              offset: 100,
+              color: theme.palette.secondary.main,
+            },
+          ]
         ],
       },
     },

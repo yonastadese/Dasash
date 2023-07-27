@@ -28,13 +28,13 @@ const navConfig = [
   // GENERAL
   // ----------------------------------------------------------------------
   {
-    subheader: 'general',
+    subheader: 'Berhan Bank',
     items: [
-      { title: 'Dashboard', path: PATH_DASHBOARD.general.app, icon: ICONS.dashboard },
-      { title: 'Berhan Bank', path: PATH_DASHBOARD.general.ecommerce, icon: ICONS.ecommerce },
-      { title: 'Bole', path: PATH_DASHBOARD.general.analytics, icon: ICONS.analytics },
-      { title: 'Jemo', path: PATH_DASHBOARD.general.banking, icon: ICONS.banking },
-      { title: 'Mexico', path: PATH_DASHBOARD.general.booking, icon: ICONS.booking },
+      { title: 'General Analytics', path: PATH_DASHBOARD.general.app, icon: ICONS.dashboard },
+      // { title: 'Berhan Bank', path: PATH_DASHBOARD.general.ecommerce, icon: ICONS.analytics },
+      { title: 'Bole Branch Analytics', path: PATH_DASHBOARD.general.analytics, icon: ICONS.analytics },
+      { title: 'Jemo Branch Analytics', path: PATH_DASHBOARD.general.banking, icon: ICONS.analytics },
+      { title: 'Mexico Branch Analytics', path: PATH_DASHBOARD.general.booking, icon: ICONS.analytics },
     ],
   },
 

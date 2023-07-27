@@ -9,9 +9,7 @@ import { BaseOptionChart } from '../../../../components/chart';
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [{ data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380] }];
-
-export default function AnalyticsConversionRates() {
+export default function AnalyticsConversionRates({ CHART_DATA, categoriesInp, titleInp, subHeaderInp }) {
   const chartOptions = merge(BaseOptionChart(), {
     tooltip: {
       marker: { show: false },
@@ -26,24 +24,13 @@ export default function AnalyticsConversionRates() {
       bar: { horizontal: true, barHeight: '28%', borderRadius: 2 },
     },
     xaxis: {
-      categories: [
-        'Italy',
-        'Japan',
-        'China',
-        'Canada',
-        'France',
-        'Germany',
-        'South Korea',
-        'Netherlands',
-        'United States',
-        'United Kingdom',
-      ],
+      categories: categoriesInp,
     },
   });
 
   return (
     <Card>
-      <CardHeader title="Conversion Rates" subheader="(+43%) than last year" />
+      <CardHeader title={titleInp} subheader={subHeaderInp} />
       <Box sx={{ mx: 3 }} dir="ltr">
         <ReactApexChart type="bar" series={CHART_DATA} options={chartOptions} height={364} />
       </Box>

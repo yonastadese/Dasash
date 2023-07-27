@@ -9,24 +9,19 @@ import { BaseOptionChart } from '../../../../components/chart';
 // ----------------------------------------------------------------------
 
 const CHART_DATA = [
+  
   {
-    year: 2019,
+    year: 2023,
     data: [
-      { name: 'Asia', data: [10, 41, 35, 51, 49, 62, 69, 91, 148] },
-      { name: 'America', data: [10, 34, 13, 56, 77, 88, 99, 77, 45] },
-    ],
-  },
-  {
-    year: 2020,
-    data: [
-      { name: 'Asia', data: [148, 91, 69, 62, 49, 51, 35, 41, 10] },
-      { name: 'America', data: [45, 77, 99, 88, 77, 56, 13, 34, 10] },
+      { name: 'Bole Branch', data: [148, 91, 69, 62, 49, 51, 35, 41, 10] },
+      { name: 'Jemo Branch', data: [45, 77, 99, 88, 77, 56, 13, 34, 10] },
+      { name: 'Mexico Branch', data: [91, 20, 122, 147, 70, 137, 90, 111, 98]},
     ],
   },
 ];
 
 export default function AppAreaInstalled() {
-  const [seriesData, setSeriesData] = useState(2019);
+  const [seriesData, setSeriesData] = useState(2023);
 
   const handleChangeSeriesData = (event) => {
     setSeriesData(Number(event.target.value));
@@ -34,15 +29,15 @@ export default function AppAreaInstalled() {
 
   const chartOptions = merge(BaseOptionChart(), {
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+      categories: ['9:00 AM','10:00 AM','11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM'],
     },
   });
 
   return (
     <Card>
       <CardHeader
-        title="Area Installed"
-        subheader="(+43%) than last year"
+        title="Customer Traffic"
+        subheader="Busiest Times on Monday To Friday"
         action={
           <TextField
             select

@@ -18,6 +18,18 @@ import {
   EcommerceCurrentBalance,
 } from '../../sections/@dashboard/general/e-commerce';
 
+import {
+  AnalyticsTasks,
+  AnalyticsNewsUpdate,
+  AnalyticsOrderTimeline,
+  AnalyticsCurrentVisits,
+  AnalyticsWebsiteVisits,
+  AnalyticsTrafficBySite,
+  AnalyticsWidgetSummary,
+  AnalyticsCurrentSubject,
+  AnalyticsConversionRates,
+} from '../../sections/@dashboard/general/analytics';
+
 // ----------------------------------------------------------------------
 
 export default function GeneralEcommerce() {
@@ -68,6 +80,10 @@ export default function GeneralEcommerce() {
 
           <Grid item xs={12} md={6} lg={4}>
             <EcommerceSaleByGender />
+          </Grid>
+
+          <Grid item xs={12} md={6} lg={8}>
+            <AnalyticsWebsiteVisits />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>

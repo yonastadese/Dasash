@@ -20,6 +20,54 @@ import {
   AppTopInstalledCountries,
 } from '../../sections/@dashboard/general/app';
 
+import {
+  EcommerceWelcome,
+  EcommerceNewProducts,
+  EcommerceYearlySales,
+  EcommerceBestSalesman,
+  EcommerceSaleByGender,
+  EcommerceWidgetSummary,
+  EcommerceSalesOverview,
+  EcommerceLatestProducts,
+  EcommerceCurrentBalance,
+} from '../../sections/@dashboard/general/e-commerce';
+
+
+import {
+  AnalyticsTasks,
+  AnalyticsNewsUpdate,
+  AnalyticsOrderTimeline,
+  AnalyticsCurrentVisits,
+  AnalyticsWebsiteVisits,
+  AnalyticsTrafficBySite,
+  AnalyticsWidgetSummary,
+  AnalyticsCurrentSubject,
+  AnalyticsConversionRates,
+} from '../../sections/@dashboard/general/analytics';
+
+import {
+  BankingContacts,
+  BankingWidgetSummary,
+  BankingInviteFriends,
+  BankingQuickTransfer,
+  BankingCurrentBalance,
+  BankingBalanceStatistics,
+  BankingRecentTransitions,
+  BankingExpensesCategories,
+} from '../../sections/@dashboard/general/banking';
+
+import {
+  BookingDetails,
+  BookingBookedRoom,
+  BookingTotalIncomes,
+  BookingRoomAvailable,
+  BookingNewestBooking,
+  BookingWidgetSummary,
+  BookingCheckInWidgets,
+  BookingCustomerReviews,
+  BookingReservationStats,
+} from '../../sections/@dashboard/general/booking';
+
 // ----------------------------------------------------------------------
 
 export default function GeneralApp() {
@@ -38,6 +86,30 @@ export default function GeneralApp() {
           <Grid item xs={12} md={4}>
             <AppFeatured />
           </Grid> */}
+
+          <Grid item xs={12} md={6} lg={8}>
+            <AnalyticsWebsiteVisits />
+          </Grid>
+
+          
+          <Grid item xs={12} md={6} lg={4}>
+            <AnalyticsCurrentVisits />
+          </Grid>
+
+          <Grid item xs={12} md={6} lg={8}>
+            <AppAreaInstalled />
+          </Grid>
+
+
+          <Grid item xs={12} lg={12}>
+            <AppNewInvoice />
+          </Grid>
+
+
+
+
+
+          
 
           <Grid item xs={12} md={4}>
             <AppWidgetSummary
@@ -73,13 +145,61 @@ export default function GeneralApp() {
             <AppCurrentDownload />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={8}>
-            <AppAreaInstalled />
+          
+         
+          {/* <Grid item xs={12} md={6} lg={4}>
+            <EcommerceSaleByGender />
           </Grid>
 
-          <Grid item xs={12} lg={12}>
-            <AppNewInvoice />
+         
+
+          
+
+          <Grid item xs={12} md={6} lg={8}>
+            <EcommerceYearlySales />
           </Grid>
+
+          
+
+
+          <Grid item xs={12} md={6} lg={8}>
+            <AnalyticsConversionRates />
+          </Grid>
+
+          <Grid item xs={12} md={6} lg={4}>
+            <AnalyticsCurrentSubject />
+          </Grid>
+
+          <Grid item xs={12} md={12}>
+            <Stack spacing={3}>
+              <BankingBalanceStatistics />
+              <BankingExpensesCategories />
+              <BankingRecentTransitions />
+            </Stack>
+          </Grid>
+
+          <Grid item xs={12} md={8}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} md={6}>
+                <BookingTotalIncomes />
+              </Grid>
+
+              <Grid item xs={12} md={6}>
+                <BookingBookedRoom />
+              </Grid>
+
+              <Grid item xs={12} md={12}>
+                <BookingCheckInWidgets />
+              </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <BookingRoomAvailable />
+          </Grid>
+
+       */}
+
 {/* 
           <Grid item xs={12} md={6} lg={4}>
             <AppTopRelated />

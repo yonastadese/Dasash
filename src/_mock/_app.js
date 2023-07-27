@@ -31,12 +31,29 @@ export const _appAuthors = [...Array(3)].map((_, index) => ({
   favourite: randomNumberRange(9999, 19999),
 }));
 
-export const _appInvoices = [...Array(5)].map((_, index) => ({
-  id: `${Date.now() + index}`,
-  price: _mock.number.price(index),
-  category: randomInArray(['Android', 'Mac', 'Windows']),
-  status: randomInArray(['paid', 'out_of_date', 'in_progress']),
-}));
+
+
+export const _appInvoices = [
+  {
+    id: 1,
+    testimonial: `"Their customer service is top-notch! Always friendly and helpful."`,
+    name: 'Dawit',
+    branch: 'Bole Branch'
+  },
+  {
+    id: 2,
+    testimonial: `"I had an issue, and they resolved it quickly and efficiently. Impressed!"`,
+    name: 'Mestawet',
+    branch: 'Jemo Branch'
+  },
+  {
+    id: 3,
+    testimonial: `"The branch ambiance is lovely, creating a pleasant banking experience."`,
+    name: 'Tilahun',
+    branch: 'Mexico Branch'
+  },
+
+];
 
 export const _appFeatured = [...Array(3)].map((_, index) => ({
   id: _mock.id(index),

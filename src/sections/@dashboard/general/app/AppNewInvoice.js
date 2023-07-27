@@ -34,37 +34,26 @@ export default function AppNewInvoice() {
 
   return (
     <Card>
-      <CardHeader title="New Invoice" sx={{ mb: 3 }} />
+      <CardHeader title="Customer Testimonials" sx={{ mb: 3 }} />
       <Scrollbar>
         <TableContainer sx={{ minWidth: 720 }}>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Invoice ID</TableCell>
-                <TableCell>Category</TableCell>
-                <TableCell>Price</TableCell>
-                <TableCell>Status</TableCell>
+                <TableCell>Testimonial</TableCell>
+                <TableCell>Name</TableCell>
+            
+                <TableCell>Branch</TableCell>
                 <TableCell />
               </TableRow>
             </TableHead>
             <TableBody>
               {_appInvoices.map((row) => (
                 <TableRow key={row.id}>
-                  <TableCell>{`INV-${row.id}`}</TableCell>
-                  <TableCell>{row.category}</TableCell>
-                  <TableCell>{fCurrency(row.price)}</TableCell>
-                  <TableCell>
-                    <Label
-                      variant={theme.palette.mode === 'light' ? 'ghost' : 'filled'}
-                      color={
-                        (row.status === 'in_progress' && 'warning') ||
-                        (row.status === 'out_of_date' && 'error') ||
-                        'success'
-                      }
-                    >
-                      {sentenceCase(row.status)}
-                    </Label>
-                  </TableCell>
+                  <TableCell>{row.testimonial}</TableCell>
+                  <TableCell>{row.name}</TableCell>
+                  <TableCell>{row.branch}</TableCell>
+                  
                   <TableCell align="right">
                     <MoreMenuButton />
                   </TableCell>
