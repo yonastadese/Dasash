@@ -70,6 +70,23 @@ export default function Router() {
         { path: 'banking', element: <GeneralBanking /> },
         { path: 'booking', element: <GeneralBooking /> },
 
+        { path: '18_mazoria_branch', element: <BranchAnalytics branchName='18 Mazoria' /> },
+        { path: 'abuware_branch', element: <BranchAnalytics branchName='Abuware' /> },
+        { path: 'africa_hibret_branch', element: <BranchAnalytics branchName='Africa Hibret' /> },
+        { path: 'arada_beranch_branch', element: <BranchAnalytics branchName='Arada Beranch' /> },
+        { path: 'ertu_lebu_branch', element: <BranchAnalytics branchName='Ertu Lebu' /> },
+        { path: 'figa_branch', element: <BranchAnalytics branchName='Figa' /> },
+        { path: 'gofa_camp_branch', element: <BranchAnalytics branchName='Gofa Camp' /> },
+        { path: 'jacros_branch', element: <BranchAnalytics branchName='Jacros' /> },
+        { path: 'kara_kore_branch', element: <BranchAnalytics branchName='Kara Kore' /> },
+        { path: 'lafto_mebrat_branch', element: <BranchAnalytics branchName='Lafto Mebrat' /> },
+        { path: 'meri_loke_branch', element: <BranchAnalytics branchName='Meri Loke' /> },
+        { path: 'saris_abo_branch', element: <BranchAnalytics branchName='Saris Abo' /> },
+        { path: 'saris_branch', element: <BranchAnalytics branchName='Saris' /> },
+        { path: 'summit_branch', element: <BranchAnalytics branchName='Summit' /> },
+        { path: 'washington_adebabay_branch', element: <BranchAnalytics branchName='Washington Adebabay' /> },
+        { path: 'zenebework_tabotmaderia_branch', element: <BranchAnalytics branchName='Zenebework Tabotmaderia' /> },
+
         {
           path: 'e-commerce',
           children: [
@@ -178,6 +195,11 @@ const GeneralEcommerce = Loadable(lazy(() => import('../pages/dashboard/GeneralE
 const GeneralAnalytics = Loadable(lazy(() => import('../pages/dashboard/GeneralAnalytics')));
 const GeneralBanking = Loadable(lazy(() => import('../pages/dashboard/GeneralBanking')));
 const GeneralBooking = Loadable(lazy(() => import('../pages/dashboard/GeneralBooking')));
+
+
+// Branch
+const BranchAnalytics = Loadable(lazy(() => import('../pages/dashboard/BranchAnalytics')));
+
 
 // ECOMMERCE
 const EcommerceShop = Loadable(lazy(() => import('../pages/dashboard/EcommerceShop')));

@@ -15,9 +15,9 @@ export const _bookings = [...Array(5)].map((_, index) => ({
 }));
 
 export const _bookingsOverview = [...Array(3)].map((_, index) => ({
-  status: ['Pending', 'Cancel', 'Done'][index],
-  quantity: _mock.number.percent(index) * 1000,
-  value: _mock.number.percent(index),
+  status: ['Bole', 'Jemo', 'Mexico'][index],
+  quantity: [66.56, 68.72, 69.02][index],
+  value: [66.56, 68.72, 69.02][index],
 }));
 
 export const _bookingReview = [...Array(5)].map((_, index) => ({

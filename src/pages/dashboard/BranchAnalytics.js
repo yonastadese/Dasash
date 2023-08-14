@@ -6,43 +6,13 @@ import useSettings from '../../hooks/useSettings';
 import Page from '../../components/Page';
 // sections
 import {
-  BookingDetails,
-  BookingBookedRoom,
-  BookingTotalIncomes,
-  BookingRoomAvailable,
-  BookingNewestBooking,
-  BookingWidgetSummary,
-  BookingCheckInWidgets,
-  BookingCustomerReviews,
-  BookingReservationStats,
-} from '../../sections/@dashboard/general/booking';
-// assets
-import { BookingIllustration, CheckInIllustration, CheckOutIllustration } from '../../assets';
-
-import {
-  AnalyticsTasks,
-  AnalyticsNewsUpdate,
-  AnalyticsOrderTimeline,
-  AnalyticsCurrentVisits,
-  AnalyticsWebsiteVisits,
-  AnalyticsTrafficBySite,
-  AnalyticsWidgetSummary,
-  AnalyticsCurrentSubject,
   AnalyticsConversionRates,
 } from '../../sections/@dashboard/general/analytics';
 
 import {
-  AppWidget,
-  AppWelcome,
-  AppFeatured,
-  AppNewInvoice,
-  AppTopAuthors,
-  AppTopRelated,
-  AppAreaInstalled,
-  AppWidgetSummary,
-  AppCurrentDownload,
-  AppTopInstalledCountries,
+  AppWidgetSummary
 } from '../../sections/@dashboard/general/app';
+
 // ----------------------------------------------------------------------
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -92,41 +62,51 @@ function findMinAndIndex(array) {
   };
 }
 
-const ratingObjs = {
-	'physical_appearance_rating': {
-    'titleName': 'Physical Appearance Rating',
-    'randomRatings': Array.from({ length: 14 }, () => generateRandomNumber(2, 10)),
-    'subRatingNames': ['Cleanliness (Inside & outside)','Lighting','Aesthetics','Branding','Thermal Comfort','Marketing Presence','Waiting Room Capacity','Waiting Area Management','Back Office Area Management','Enterance Accessibility','Parking Capacity','Ambient Sound','Location Convenience','Wayfinding Signage']
-  },
 
-  'employee_character_rating': {
-    'titleName': 'Employee Character Rating',
-    'randomRatings': Array.from({ length: 9 }, () => generateRandomNumber(2, 10)),
-    'subRatingNames': ['Attentiveness ', 'Friendliness ', 'Courteousness', 'Empathy', 'Customer Centrality', 'Professionalism', 'Availability', 'Communication', 'Professional Dress']
-  },
 
-  'service_effectiveness_rating': {
-    'titleName': 'Service Effectiveness Rating',
-    'randomRatings': Array.from({ length: 11 }, () => generateRandomNumber(2, 10)),
-    'subRatingNames': ['Service Delivery', 'Regulatory Compliance(National Bank)', 'Electricity Availability', 'System Speed/ Availability', 'Proactive Product Promotion', 'Transaction Accuracy', 'Service Accuracy', 'Employee Proactivity', 'Service Speed', 'Helpfulness', 'Proficiency']
-  },
 
-	'service_easiness_rating':  {
-    'titleName': 'Service Easiness Rating',
-    'randomRatings': Array.from({ length: 13 }, () => generateRandomNumber(2, 10)),
-    'subRatingNames': ['Waiting time', 'Service Duration', 'Proactive Assistance', 'Timely Response', 'Problem-Solving Ability', 'Effortless', 'User- friendliness', 'Smoothness', 'Convenience', 'Straight-forwardness', 'Stream-linedness', 'Simplicity', 'Shamelessness']
+
+export default function BranchAnalytics(props) {
+
+  const ratingObjs = {
+    'physical_appearance_rating': {
+      'titleName': 'Physical Appearance Rating',
+      'randomRatings': Array.from({ length: 14 }, () => generateRandomNumber(2, 10)),
+      'subRatingNames': ['Cleanliness (Inside & outside)','Lighting','Aesthetics','Branding','Thermal Comfort','Marketing Presence','Waiting Room Capacity','Waiting Area Management','Back Office Area Management','Enterance Accessibility','Parking Capacity','Ambient Sound','Location Convenience','Wayfinding Signage']
+    },
+  
+    'employee_character_rating': {
+      'titleName': 'Employee Character Rating',
+      'randomRatings': Array.from({ length: 9 }, () => generateRandomNumber(2, 10)),
+      'subRatingNames': ['Attentiveness ', 'Friendliness ', 'Courteousness', 'Empathy', 'Customer Centrality', 'Professionalism', 'Availability', 'Communication', 'Professional Dress']
+    },
+  
+    'service_effectiveness_rating': {
+      'titleName': 'Service Effectiveness Rating',
+      'randomRatings': Array.from({ length: 11 }, () => generateRandomNumber(2, 10)),
+      'subRatingNames': ['Service Delivery', 'Regulatory Compliance(National Bank)', 'Electricity Availability', 'System Speed/ Availability', 'Proactive Product Promotion', 'Transaction Accuracy', 'Service Accuracy', 'Employee Proactivity', 'Service Speed', 'Helpfulness', 'Proficiency']
+    },
+  
+    'service_easiness_rating':  {
+      'titleName': 'Service Easiness Rating',
+      'randomRatings': Array.from({ length: 13 }, () => generateRandomNumber(2, 10)),
+      'subRatingNames': ['Waiting time', 'Service Duration', 'Proactive Assistance', 'Timely Response', 'Problem-Solving Ability', 'Effortless', 'User- friendliness', 'Smoothness', 'Convenience', 'Straight-forwardness', 'Stream-linedness', 'Simplicity', 'Shamelessness']
+    }
+  
   }
-
-}
-
-export default function GeneralBooking() {
+  
   const { themeStretch } = useSettings();
 
+  // eslint-disable-next-line react/prop-types
+  const { branchName } = props;
+
+  console.log(branchName, 'branchName')
+
   return (
-    <Page title="General: Banking">
+    <Page title="Branch: Analytics">
       <Container maxWidth={themeStretch ? false : 'xl'}>
-      <Typography variant="h4" sx={{ mb: 5 }}>
-          Mexico Branch Analytics
+        <Typography variant="h4" sx={{ mb: 5 }}>
+          {branchName} Branch Analytics
         </Typography>
 
         <Grid container spacing={3}>
@@ -141,14 +121,14 @@ export default function GeneralBooking() {
           </Grid>
           <Grid item xs={12} md={4}>
             <AppWidgetSummary
-              title="Mexico Branch Physical Appearance Highest score"
+              title={`${branchName} Branch Physical Appearance Highest score`}
               percent={0.1}
               total={findMaxAndIndex(ratingObjs.physical_appearance_rating.randomRatings).maxNumber}
               text={ratingObjs.physical_appearance_rating.subRatingNames.at(findMaxAndIndex(ratingObjs.physical_appearance_rating.randomRatings).maxIndex)}
               chartData={[8, 9, 31, 8, 16, 37, 8, 33, 46, 31]}
             />
              <AppWidgetSummary
-              title="Mexico Branch Physical Appearance lowest score"
+              title={`${branchName} Branch Physical Appearance lowest score`}
               percent={-0.1}
               total={findMinAndIndex(ratingObjs.physical_appearance_rating.randomRatings).minNumber}
               text={ratingObjs.physical_appearance_rating.subRatingNames.at(findMinAndIndex(ratingObjs.physical_appearance_rating.randomRatings).minIndex)}
@@ -167,14 +147,14 @@ export default function GeneralBooking() {
           </Grid>
           <Grid item xs={12} md={4}>
             <AppWidgetSummary
-              title="Mexico Branch Employee Character Highest score"
+              title={`${branchName} Branch Employee Character Highest score`}
               percent={0.1}
               total={findMaxAndIndex(ratingObjs.employee_character_rating.randomRatings).maxNumber}
               text={ratingObjs.employee_character_rating.subRatingNames.at(findMaxAndIndex(ratingObjs.employee_character_rating.randomRatings).maxIndex)}
               chartData={[8, 9, 31, 8, 16, 37, 8, 33, 46, 31]}
             />
              <AppWidgetSummary
-              title="Mexico Branch Employee Character lowest score"
+              title={`${branchName} Branch Employee Character lowest score`}
               percent={-0.1}
               total={findMinAndIndex(ratingObjs.employee_character_rating.randomRatings).minNumber}
               text={ratingObjs.employee_character_rating.subRatingNames.at(findMinAndIndex(ratingObjs.employee_character_rating.randomRatings).minIndex)}
@@ -193,14 +173,14 @@ export default function GeneralBooking() {
           </Grid>
           <Grid item xs={12} md={4}>
             <AppWidgetSummary
-              title="Mexico Branch Service Effectiveness Highest score"
+              title={`${branchName} Branch Service Effectiveness Highest score`}
               percent={0.1}
               total={findMaxAndIndex(ratingObjs.service_effectiveness_rating.randomRatings).maxNumber}
               text={ratingObjs.service_effectiveness_rating.subRatingNames.at(findMaxAndIndex(ratingObjs.service_effectiveness_rating.randomRatings).maxIndex)}
               chartData={[8, 9, 31, 8, 16, 37, 8, 33, 46, 31]}
             />
              <AppWidgetSummary
-              title="Mexico Branch Service Effectiveness lowest score"
+              title={`${branchName} Branch Service Effectiveness lowest score`}
               percent={-0.1}
               total={findMinAndIndex(ratingObjs.service_effectiveness_rating.randomRatings).minNumber}
               text={ratingObjs.service_effectiveness_rating.subRatingNames.at(findMinAndIndex(ratingObjs.service_effectiveness_rating.randomRatings).minIndex)}
@@ -219,14 +199,14 @@ export default function GeneralBooking() {
           </Grid>
           <Grid item xs={12} md={4}>
             <AppWidgetSummary
-              title="Mexico Branch Service Easiness Highest score"
+              title={`${branchName} Branch Service Easiness Highest score`}
               percent={0.1}
               total={findMaxAndIndex(ratingObjs.service_easiness_rating.randomRatings).maxNumber}
               text={ratingObjs.service_easiness_rating.subRatingNames.at(findMaxAndIndex(ratingObjs.service_easiness_rating.randomRatings).maxIndex)}
               chartData={[8, 9, 31, 8, 16, 37, 8, 33, 46, 31]}
             />
              <AppWidgetSummary
-              title="Mexico Branch Service Easiness lowest score"
+              title={`${branchName} Branch Service Easiness lowest score`}
               percent={-0.1}
               total={findMinAndIndex(ratingObjs.service_easiness_rating.randomRatings).minNumber}
               text={ratingObjs.service_easiness_rating.subRatingNames.at(findMinAndIndex(ratingObjs.service_easiness_rating.randomRatings).minIndex)}
@@ -236,56 +216,6 @@ export default function GeneralBooking() {
 
 
 
-          {/* <Grid item xs={12} sm={6} md={3}>
-            <AnalyticsWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <AnalyticsWidgetSummary title="New Users" total={1352831} color="info" icon={'ant-design:apple-filled'} />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <AnalyticsWidgetSummary
-              title="Item Orders"
-              total={1723315}
-              color="warning"
-              icon={'ant-design:windows-filled'}
-            />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <AnalyticsWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
-          </Grid> */}
-
-          {/* <Grid item xs={12} md={6} lg={8}>
-            <AnalyticsWebsiteVisits />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={4}>
-            <AnalyticsCurrentVisits />
-          </Grid>
-
-          
-
-          <Grid item xs={12} md={6} lg={4}>
-            <AnalyticsCurrentSubject />
-          </Grid> */}
-
-          {/* <Grid item xs={12} md={6} lg={8}>
-            <AnalyticsNewsUpdate />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={4}>
-            <AnalyticsOrderTimeline />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={4}>
-            <AnalyticsTrafficBySite />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={8}>
-            <AnalyticsTasks />
-          </Grid> */}
 
         </Grid>
       </Container>

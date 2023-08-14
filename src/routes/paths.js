@@ -40,6 +40,26 @@ export const PATH_DASHBOARD = {
     analytics: path(ROOTS_DASHBOARD, '/analytics'),
     banking: path(ROOTS_DASHBOARD, '/banking'),
     booking: path(ROOTS_DASHBOARD, '/booking'),
+    branch: path(ROOTS_DASHBOARD, '/branch'),
+
+
+    '_18_mazoria_branch': path(ROOTS_DASHBOARD, '/18_mazoria_branch'),
+    'abuware_branch': path(ROOTS_DASHBOARD, '/abuware_branch'),
+    'africa_hibret_branch': path(ROOTS_DASHBOARD, '/africa_hibret_branch'),
+    'arada_beranch_branch': path(ROOTS_DASHBOARD, '/arada_beranch_branch'),
+    'ertu_lebu_branch': path(ROOTS_DASHBOARD, '/ertu_lebu_branch'),
+    'figa_branch': path(ROOTS_DASHBOARD, '/figa_branch'),
+    'gofa_camp_branch': path(ROOTS_DASHBOARD, '/gofa_camp_branch'),
+    'jacros_branch': path(ROOTS_DASHBOARD, '/jacros_branch'),
+    'kara_kore_branch': path(ROOTS_DASHBOARD, '/kara_kore_branch'),
+    'lafto_mebrat_branch': path(ROOTS_DASHBOARD, '/lafto_mebrat_branch'),
+    'meri_loke_branch': path(ROOTS_DASHBOARD, '/meri_loke_branch'),
+    'saris_abo_branch': path(ROOTS_DASHBOARD, '/saris_abo_branch'),
+    'saris_branch': path(ROOTS_DASHBOARD, '/saris_branch'),
+    'summit_branch': path(ROOTS_DASHBOARD, '/summit_branch'),
+    'washington_adebabay_branch': path(ROOTS_DASHBOARD, '/washington_adebabay_branch'),
+    'zenebework_tabotmaderia_branch': path(ROOTS_DASHBOARD, '/zenebework_tabotmaderia_branch'),
+
   },
   mail: {
     root: path(ROOTS_DASHBOARD, '/mail'),

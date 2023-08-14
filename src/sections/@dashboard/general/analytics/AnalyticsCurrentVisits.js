@@ -63,7 +63,7 @@ export default function AnalyticsCurrentVisits() {
 
   return (
     <Card>
-      <CardHeader title="Shoppers Rating" />
+      <CardHeader title="Weight of the Success Criteria" />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="pie" series={CHART_DATA} options={chartOptions} height={300} />
       </ChartWrapperStyle>
